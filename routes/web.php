@@ -6,12 +6,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('/listing', function () {
-    return view('partials.listing');
+Route::get('/profile', function () {
+    return view('partials.profile');
 });
 
-Route::get('/products', function () {
-    return view('partials.products');
+
+Route::get('/clients', function () {
+    return view('partials.clients');
+});
+
+
+Route::get('/chat', function () {
+   return view('partials.chat');
 });
 

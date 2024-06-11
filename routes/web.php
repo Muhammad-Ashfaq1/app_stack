@@ -1,22 +1,16 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/profile', function () {
-    return view('partials.profile');
-});
 
 
-Route::get('/clients', function () {
-    return view('partials.clients');
-});
+Route::get('/client', [HomeController::class, 'clientView'])->name('clients');
+Route::get('/profile', [HomeController::class, 'profileView'])->name('profile');
+Route::get('/chat', [HomeController::class, 'chatView'])->name('chat');
 
-
-Route::get('/chat', function () {
-   return view('partials.chat');
-});
 

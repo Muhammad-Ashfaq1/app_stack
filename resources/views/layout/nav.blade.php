@@ -118,7 +118,10 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="pages-settings.html">Settings & Privacy</a>
                     <a class="dropdown-item" href="#">Help</a>
-                    <a class="dropdown-item" href="#">Sign out</a>
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button class="dropdown-item">Log out</button>
+                    </form>
                 </div>
             </li>
         </ul>

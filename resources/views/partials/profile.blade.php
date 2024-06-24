@@ -17,8 +17,8 @@
                             width="128"
                             height="128"
                         />
-                        <h5 class="card-title mb-0">{{ @$name ?? 'No Name' }}</h5>
-                        <div class="text-muted mb-2">{{ $designation }}</div>
+                        <h5 class="card-title mb-0">{{ @$name }}</h5>
+                        <div class="text-muted mb-2">{{ @$email }}</div>
 
                         <div>
                             <a class="btn btn-primary btn-sm" href="#">Follow</a>

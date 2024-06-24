@@ -32,15 +32,8 @@ class AuthController extends Controller
         $user->password = $data['password'];
         $user->email = $data['email'];
         $user->save();
-//        User::create([
-//            'name' => $request->name,
-//            'email' => $request->email,
-//            'password' => $request->passwor,
-//        ]);
         toastr()->success('Signup successfully!');
         return redirect()->route('login');
-
-//        User::create([$data]);
     }
 
     public function login(Request $request)

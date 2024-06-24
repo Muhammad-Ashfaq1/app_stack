@@ -9,6 +9,7 @@
             <li class="sidebar-item"><a class="sidebar-link" href="{{ route('profile') }}">Profile</a></li>
             <li class="sidebar-item"><a class="sidebar-link" href="{{ route('clients') }}">Clients</a></li>
             <li class="sidebar-item"><a class="sidebar-link" href="{{ route('chat') }}">Chat <span class="sidebar-badge badge badge-primary">New</span></a></li>
+            <li class="sidebar-item"><a class="sidebar-link" href="{{ route('students') }}">Students</a></li>
         </ul>
         <div class="sidebar-bottom d-none d-lg-block">
             <div class="media">

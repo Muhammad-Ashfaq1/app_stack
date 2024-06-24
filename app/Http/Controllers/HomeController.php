@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -12,9 +13,9 @@ class HomeController extends Controller
     }
     public function profileView()
     {
-        $name = 'Ansar Abbas';
-        $designation = 'Laravel Developer';
-        return view('partials.profile', compact( 'name','designation'));
+        $name = Auth::user()->name;
+        $email = Auth::user()->email;
+        return view('partials.profile', compact( 'name','email'));
     }
     public function chatView()
     {

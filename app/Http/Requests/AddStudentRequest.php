@@ -24,9 +24,20 @@ class AddStudentRequest extends FormRequest
         return [
             'first_name' => 'required|string',
             'last_name' => 'nullable|string',
-            'email' =>'required|email',
+            'email' =>'required|email|unique',
             'phone_number' =>'required|numeric',
             'semester' =>'required|numeric',
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'first_name.required' => 'First name is required',
+            'last_name.required' => 'Last name is required',
+            'email.required' => 'Email is required',
+            'phone_number.required' => 'Phone number is required',
+           'semester.required' => 'Semester is required',
         ];
     }
 }
